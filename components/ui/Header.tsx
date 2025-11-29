@@ -6,8 +6,8 @@ import UserDropDown from '../UserDropDown'
 
 const  Header = () => {
   return (
-    <header className='sticky top-0 header'>
-        <div className='container header-wrapper'>
+    <header className=' sticky top-0 header'>
+        <div className=' container header-wrapper'>
             <Link href='/'>
                 <Image src="/assets/icons/logo.svg" alt="Logo" width={120} height={32} className='h-8 w-auto cursor-pointer' />
             </Link>

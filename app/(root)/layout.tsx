@@ -2,11 +2,9 @@ import Header from "@/components/ui/Header";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="min-h-screen text-gray-400">
-        <Header/>
-      <div className="container py-10">
-        {children}
-      </div>
+    <main className=" min-h-screen text-gray-400">
+      <Header  />
+      <div className="container py-10">{children}</div>
     </main>
   );
 };
