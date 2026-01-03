@@ -4,11 +4,15 @@ import FooterLink from "@/components/FooterLink";
 import { CountrySelectField } from "@/components/forms/countryList";
 import Inputfield from "@/components/forms/inputfield";
 import SelectFieldComponent from "@/components/forms/selectfieldComponent";
+import { signUpWithEmail } from "@/lib/actions/auth.actions";
 import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from "@/lib/constants";
 import { error } from "console";
+import { useRouter } from "next/navigation";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { toast } from "sonner";
 
 const Signup = () => {
+  const router=useRouter();
   const {
     register,
     handleSubmit,
@@ -28,9 +32,15 @@ const Signup = () => {
   });
   const onSubmit = async (data: SignupFormData) => {
     try {
-      console.log(data);
+      const result =await signUpWithEmail(data)
+      if(result.success){
+        router.push('/')
+      }
     } catch (e) {
       console.error("Signup error:", e);
+      toast.error("Sign-up failed. Please try again.",{
+        description:e instanceof Error? e.message : "An unexpected error occurred"
+      });
     }
   };
   return (

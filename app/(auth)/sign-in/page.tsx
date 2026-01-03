@@ -3,10 +3,14 @@
 import FooterLink from "@/components/FooterLink";
 
 import Inputfield from "@/components/forms/inputfield";
+import { signInWithEmail } from "@/lib/actions/auth.actions";
+import { useRouter } from "next/navigation";
 
 import { useForm} from "react-hook-form";
+import { toast } from "sonner";
 
 const Signup = () => {
+  const router=useRouter();
   const {
     register,
     handleSubmit,
@@ -20,11 +24,17 @@ const Signup = () => {
     },
     mode: "onBlur",
   });
-  const onSubmit = async (data: SignInFormData) => {
+const onSubmit = async (data: SignupFormData) => {
     try {
-      console.log(data);
+      const result =await signInWithEmail(data)
+      if(result.success){
+        router.push('/')
+      }
     } catch (e) {
-      console.error("SignIn error:", e);
+      console.error("Sign-in error:", e);
+      toast.error("Sign-in failed. Please try again.",{
+        description:e instanceof Error? e.message : "An unexpected error occurred"
+      });
     }
   };
   return (
