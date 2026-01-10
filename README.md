@@ -1,9 +1,9 @@
-#AI Stocks Analyser
+# AI Stocks Analyser
 
 AI Stocks Analyser is a modern stock market dashboard that provides users with the latest stock data, key market metrics, and insights in a clean and interactive interface.
 The platform is designed to centralize stock information, enable secure user access, and support future AI-driven analysis.
 
-##Features
+## Features
 
 Live stock dashboard showing latest prices
 
@@ -19,28 +19,28 @@ Scalable architecture for future AI-based features
 
 Fast and responsive user interface
 
-##Tech Stack
+## Tech Stack
 ###Frontend
 
 Next.js
 
-###Backend / Database
+### Backend / Database
 
 MongoDB
 
 Database ingestion functions for stock data updates
 
-###Authentication and Security
+### Authentication and Security
 
 Better-Auth
 
 Secure cookie and session management
 
-###Emails and Notifications
+### Emails and Notifications
 
 NodeMailer for sending stock summaries and informational emails
 
-##Architecture Overview
+## Architecture Overview
 
 Frontend built with Next.js for rendering the stock dashboard
 
@@ -53,9 +53,9 @@ Authentication layer handling user sessions and access control
 Email service for sending automated stock-related emails
 
 
-##Setup and Installation
+## Setup and Installation
 
-###Prerequisites
+### Prerequisites
 
 Node.js (v18 or higher recommended)
 
@@ -63,13 +63,13 @@ MongoDB instance
 
 Proper environment variable configuration
 
-###Installation Steps
+### Installation Steps
 git clone https://github.com/AyushSonar-dev/AI-StocksAnalyser.git
 cd AI-StocksAnalyser
 npm install
 npm run dev
 
-###Environment Variables
+### Environment Variables
 
 Create a .env file and configure the following:
 
@@ -94,7 +94,7 @@ NODEMAILER_PASSWORD=your_email_app_password
 NEXT_PUBLIC_FINNHUB_API_KEY=your_finnhub_api_key
 
 
-##Future Enhancements
+## Future Enhancements
 
 AI-based stock trend prediction
 
@@ -106,7 +106,7 @@ Advanced data visualizations
 
 Multi-market support
 
-##Use Cases
+## Use Cases
 
 Investors tracking stock market trends
 
@@ -116,7 +116,7 @@ Developers building fintech dashboards
 
 
 
-###Author:
+### Author:
 
 Ayush Sonar
 GitHub: https://github.com/AyushSonar-dev
